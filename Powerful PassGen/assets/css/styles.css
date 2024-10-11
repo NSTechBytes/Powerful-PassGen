@@ -1,0 +1,234 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 320px; /* Increased width */
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Password Box Styling */
+.password-box {
+    margin-top: 20px;
+    background-color: var(--bg-box-color);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.password-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid var(--input-border-color);
+    border-radius: 5px;
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+    transition: border-color 0.3s;
+}
+
+.password-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--icon-color);
+}
+
+input[type="number"] {
+    width: 60px;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px;
+    margin: 10px 0;
+    border: 2px solid var(--input-border-color);
+    border-radius: 5px;
+    background-color: var(--input-bg-color);
+    color: var(--input-text-color);
+}
+
+/* Label and Checkbox Styling */
+label {
+    font-size: 16px;
+    margin-right: 10px;
+    color: var(--text-color);
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.options {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 5px;
+    width: 140px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button i {
+    margin-right: 5px;
+}
+
+#generate-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#copy-btn {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#copy-message {
+    display: none;
+    margin-top: 10px;
+    color: var(--success-color);
+    font-size: 16px;
+    background-color: var(--success-bg-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#copy-message.hidden {
+    display: none;
+}
+
+#copy-message.visible {
+    display: block;
+}
+
+/* Light Mode */
+body.light-mode {
+    --primary-color: #3498db;
+    --secondary-color: #f39c12;
+    --bg-box-color: #f7f7f7;
+    --text-color: #2c3e50;
+    --icon-color: #2980b9;
+    --input-border-color: #ddd;
+    --input-bg-color: #fff;
+    --input-text-color: #333;
+    --success-color: green;
+    --success-bg-color: #e8f5e9;
+}
+
+.light-mode .container {
+    background-color: #ffffff;
+    color: #2c3e50;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --primary-color: #1abc9c;
+    --secondary-color: #e67e22;
+    --bg-box-color: #34495e;
+    --text-color: #ecf0f1;
+    --icon-color: #1abc9c;
+    --input-border-color: #2c3e50;
+    --input-bg-color: #2c3e50;
+    --input-text-color: #ecf0f1;
+    --success-color: #2ecc71;
+    --success-bg-color: #34495e;
+}
+
+.dark-mode .container {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+/* Theme Toggle Switch */
+.theme-toggle {
+    margin-top: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(18px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Text for theme mode */
+#theme-label {
+    margin-left: 10px;
+    font-size: 16px;
+}

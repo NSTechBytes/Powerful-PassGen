@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Powerful PassGen",
+  "version": "458.0",
+  "description": "Generate a strong password with a click and copy to clipboard.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/images/icon16.png",
+      "48": "assets/images/icon48.png",
+      "128": "assets/images/icon128.png"
+    }
+  },
+  "permissions": [
+    "clipboardWrite",
+    "storage"
+  ],
+  "icons": {
+    "16": "assets/images/icon16.png",
+    "48": "assets/images/icon48.png",
+    "128": "assets/images/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["welcome.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": {
+    "service_worker": "assets/js/background.js"
+  }
+}
